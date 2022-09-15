@@ -6,13 +6,20 @@
         xmlns:local="clr-namespace:WpfWireframes"
         mc:Ignorable="d"
         Title="JustifyView" Height="450" Width="800">
+
+    <Window.Resources>
+        <SolidColorBrush x:Key="MyBackgroundBrush" Color="DodgerBlue" />
+        <SolidColorBrush x:Key="MyBackgroundBorderBrush" Color="LightGray" />
+    </Window.Resources>
+    
     <Grid>
 
         <DockPanel>
+            
             <DockPanel
                 DockPanel.Dock="Top"
                 Height="80"
-                Background="DarkSlateBlue"                
+                Background="{StaticResource MyBackgroundBrush}"                
                 >
 
                 <!-- Left -->
@@ -21,74 +28,52 @@
                     DockPanel.Dock="Left"
                     Width="60"
                     Height="60"
-                    Fill="LightGray"
+                    Fill="{StaticResource MyBackgroundBorderBrush}"
                     Margin="20,10"
                     />
 
                
 
-
                 <!-- Right -->
                 <StackPanel
-                     DockPanel.Dock="Right"
+                    DockPanel.Dock="Right"
                     Margin="20"
                     Orientation="Horizontal">
 
+                    <StackPanel.Resources>
+                        <Style TargetType="Ellipse">
+                            <Setter Property="Width" Value="20" />
+                            <Setter Property="Height" Value="20" />
+                            <Setter Property="Margin" Value="5" />
+                            <Setter Property="Fill" Value="{StaticResource MyBackgroundBorderBrush}" />
+                        </Style>
+                    </StackPanel.Resources>
+        
+                    <Ellipse />
+                    <Ellipse />
 
-              
-                    <Ellipse Width="20"
-                         Height="20"
-                         Margin="5"
-                             Fill="LightGray" />
-
-                    <Ellipse Width="20"
-                         Height="20"
-                             Margin="5"
-                         Fill="LightGray" />
 
                 </StackPanel>
 
                 <!-- Center -->
 
                 <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
-                    
+                    <StackPanel.Resources>
+                        <Style TargetType="Line">
+                            <Setter Property="X2" Value="25" />
+                            <Setter Property="Margin" Value="10" />
+                            <Setter Property="Stroke" Value="{StaticResource MyBackgroundBorderBrush}" />
+                            <Setter Property="StrokeThickness" Value="10" />
+                            <Setter Property="VerticalAlignment" Value="Center" />
+                            <Setter Property="StrokeStartLineCap" Value="Round" />
+                            <Setter Property="StrokeEndLineCap" Value="Round" />
+                        </Style>
+                    </StackPanel.Resources>    
                 
-                <Line X2="25"
-                      Margin="10"
-                      Stroke="LightGray"
-                      StrokeThickness="10"
-                      VerticalAlignment="Center"
-                      StrokeStartLineCap="Round"
-                      StrokeEndLineCap="Round"
-                      />
-
-                    <Line X2="25"
-                              Margin="10"
-                      Stroke="LightGray"
-                      StrokeThickness="10"
-                      VerticalAlignment="Center"
-                      StrokeStartLineCap="Round"
-                      StrokeEndLineCap="Round"
-                      />
-
-                    <Line X2="25"
-                              Margin="10"
-                      Stroke="LightGray"
-                      StrokeThickness="10"
-                      VerticalAlignment="Center"
-                      StrokeStartLineCap="Round"
-                      StrokeEndLineCap="Round"
-                      />
-
-
-                    <Line X2="25"
-                              Margin="10"
-                      Stroke="LightGray"
-                      StrokeThickness="10"
-                      VerticalAlignment="Center"
-                      StrokeStartLineCap="Round"
-                      StrokeEndLineCap="Round"
-                      />
+                    <Line />
+                    <Line />
+                    <Line />
+                    <Line />
 
 
                 </StackPanel>

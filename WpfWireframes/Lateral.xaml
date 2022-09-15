@@ -14,7 +14,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <DockPanel Background="DarkSlateBlue">
+        <DockPanel Background="DodgerBlue">
 
             <!-- Top -->
             <Ellipse 

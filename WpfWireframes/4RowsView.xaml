@@ -7,6 +7,14 @@
         mc:Ignorable="d"
         Background="LightGray"
         Title="MainWindow" Height="750" Width="800">
+
+
+    <Window.Resources>
+        <SolidColorBrush x:Key="MyBackgroundBrush" Color="DodgerBlue" />
+        <SolidColorBrush x:Key="MyBackgroundBorderBrush" Color="White" />
+    </Window.Resources>
+
+    
     <Grid>
 
         <DockPanel>
@@ -23,69 +31,45 @@
             <DockPanel
                 DockPanel.Dock="Top"
                 Height="80"
-                Background="BlueViolet"                
-                >
+                Background="{StaticResource MyBackgroundBrush}" >
 
                 <StackPanel
                     Margin="20"
                     HorizontalAlignment="Right"
                     Orientation="Horizontal">
-                    
-               
-                <Ellipse Width="20"
-                         Height="20"
-                         Margin="5"
-                         Fill="LightGray" />
 
-                    <Ellipse Width="20"
-                         Height="20"
-                         Margin="5"
-                             Fill="LightGray" />
+                    <StackPanel.Resources>
+                        <Style TargetType="Ellipse">
+                            <Setter Property="Width" Value="20" />
+                            <Setter Property="Height" Value="20" />
+                            <Setter Property="Margin" Value="5" />
+                            <Setter Property="Fill" Value="LightGray" />
+                        </Style>
+                    </StackPanel.Resources>
 
-                    <Ellipse Width="20"
-                         Height="20"
-                             Margin="5"
-                         Fill="LightGray" />
+                    <Ellipse  />
+                    <Ellipse  />
+                    <Ellipse  />
 
                 </StackPanel>
-
-
             </DockPanel>
 
 
-            <Grid Margin="70,30">
-                <Grid.RowDefinitions>
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                </Grid.RowDefinitions>
+            <UniformGrid Rows="4" Margin="70,30">
+                <UniformGrid.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="Margin" Value="0,15" />
+                        <Setter Property="Background" Value="{StaticResource MyBackgroundBorderBrush}" />
+                    </Style>
+                </UniformGrid.Resources>
 
-                <Border 
-                    Grid.Row="0"
-                    Margin="0,15"
-                    Background="White"
-                         />
-
-                <Border 
-                    Grid.Row="1"
-                    Margin="0,15"
-                    Background="White"
-                         />
+                <Border  />
+                <Border  />
+                <Border  />
+                <Border  />
 
 
-                <Border 
-                    Grid.Row="2"
-                    Margin="0,15"
-                    Background="White"
-                         />
-
-                <Border 
-                    Grid.Row="3"
-                    Margin="0,15"
-                    Background="White"
-                         />
-            </Grid>
+            </UniformGrid>
         </DockPanel>
 
     </Grid>

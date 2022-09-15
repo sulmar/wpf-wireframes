@@ -19,8 +19,8 @@
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Margin="30"
-            CornerRadius="10"
-            Background="DarkSlateBlue"
+            CornerRadius="10" 
+            Background="DodgerBlue"
             Width="100"
             Height="250" 
             />

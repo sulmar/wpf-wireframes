@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:WpfWireframes"
              StartupUri="JustifyView.xaml">
     <Application.Resources>
-         
+
+        <SolidColorBrush x:Key="BackgroundBrush" Color="LightGray" />
+
     </Application.Resources>
 </Application>
